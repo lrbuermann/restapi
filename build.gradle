@@ -14,6 +14,10 @@ repositories {
 	mavenCentral()	
 }
 
+bootRun {
+	systemProperties System.properties
+}
+
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
 	implementation 'org.springframework.boot:spring-boot-starter-data-rest'
