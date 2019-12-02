@@ -27,11 +27,6 @@ public class ProductController {
 		return p;
 	}
 	
-	@RequestMapping("/products/price/createTable")
-	public void createTable() {
-		this.priceRepo.createTable();
-	}
-	
 	@RequestMapping(value = "/products/{id}", method = RequestMethod.PUT)
 	public ResponseEntity<Product> setCurrentPrice(@PathVariable long id, @RequestBody Product product) {
 		this.priceRepo.save(product.getPrice());
