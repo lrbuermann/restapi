@@ -9,6 +9,5 @@ phases:
       - echo Build Started at `date`
       - ./gradlew build
 artifacts:
-  type: zip
   files:
     - 'build/libs/*.jar'
