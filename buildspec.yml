@@ -1,9 +1,5 @@
 version: 0.2
 
-env:
-  variables:
-    spring.profiles.active: "aws"
-
 phases:
   install:
     runtime-versions:

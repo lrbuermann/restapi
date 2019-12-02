@@ -25,11 +25,14 @@ public class DynamoDBConfig {
     @Value("${amazon.aws.secretKey}")
     private String awsSecretKey;
 
+    @Value("${amazon.aws.region}")
+    private String awsRegion;
+    
     @Bean
     public AmazonDynamoDB amazonDynamoDB() {
 
         AmazonDynamoDB amazonDynamoDB = AmazonDynamoDBClientBuilder.standard().withEndpointConfiguration(
-        		new AwsClientBuilder.EndpointConfiguration(dynamoDbEndpoint, "us-west-2"))
+        		new AwsClientBuilder.EndpointConfiguration(dynamoDbEndpoint, awsRegion))
         		.withCredentials(new AWSStaticCredentialsProvider(this.amazonAWSCredentials()))
         		.build(); 
 
