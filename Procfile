@@ -1,1 +1,1 @@
-web: java -jar build/libs/restapi-0.0.1-SNAPSHOT.jar -Dspring.profiles.active=aws
+web: java -jar restapi-0.0.1-SNAPSHOT.jar -Dspring.profiles.active=aws
