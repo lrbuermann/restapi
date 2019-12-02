@@ -3,8 +3,8 @@ version: 0.1
 phases:
   build:
     commands:
-	  - echo Build started
-	  - gradlew build
+      - echo Build Started at `date`
+      - gradlew build
 artifacts:
   type: zip
   files:
